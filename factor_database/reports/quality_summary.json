@@ -1,0 +1,21 @@
+{
+  "input_price_rows": 293119,
+  "input_fundamental_rows_after_filters": 80487,
+  "panel_rows": 147093,
+  "panel_start": "2000-01-31",
+  "panel_end": "2024-12-31",
+  "unique_permnos": 1051,
+  "unique_gvkeys_matched": 873,
+  "average_members_per_month": 490.31,
+  "minimum_members_per_month": 462,
+  "maximum_members_per_month": 503,
+  "average_membership_coverage": 0.9815865172703088,
+  "average_gvkey_coverage": 0.9165448664345274,
+  "point_in_time_leakage_violations": 0,
+  "duplicate_date_permno_rows": 0,
+  "source_limitations": [
+    "Historical membership is a public ticker-based dataset, not CRSP msp500list.",
+    "PERMNO and GVKEY links are reconstructed from ticker/CUSIP aliases because CCM link history was not supplied.",
+    "Unmatched membership codes are excluded and listed in the audit report."
+  ]
+}

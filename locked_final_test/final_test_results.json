@@ -1,0 +1,25 @@
+{
+  "status": "FINAL_TEST_COMPLETED_NO_RETUNING_ALLOWED",
+  "configuration_sha256": "572605b6dbb07ad3ac811ca43e28493cac64afb28537454830b21dd69e075681",
+  "test_period": [
+    "2020-01-01",
+    "2024-12-31"
+  ],
+  "portfolio_size": 100,
+  "metrics": {
+    "months": 59,
+    "annual_return": 0.14890098778895045,
+    "annual_volatility": 0.20767167103357922,
+    "sharpe_zero_rf": 0.7170019244698719,
+    "maximum_drawdown": -0.2152364438511708,
+    "positive_month_ratio": 0.6271186440677966,
+    "average_turnover": 0.11576271186440679,
+    "annualized_transaction_cost": 0.0013891525423728815,
+    "benchmark_annual_return": 0.14932566433472694,
+    "annualized_excess_return_arithmetic": 0.004041735183407368,
+    "information_ratio": 0.06884356238000054,
+    "months_with_selection_failure": 0,
+    "portfolio_size_rule": 100
+  },
+  "important_disclosure": "The 2020-2024 period was inspected in earlier V1 single-factor diagnostics before V2 was designed, so this is a locked historical test rather than a pristine never-seen holdout."
+}

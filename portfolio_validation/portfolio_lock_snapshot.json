@@ -1,0 +1,113 @@
+{
+  "version": "2.0",
+  "status": "PORTFOLIO_RULES_LOCKED_BEFORE_FINAL_TEST",
+  "research_period": [
+    "2000-01-01",
+    "2014-12-31"
+  ],
+  "validation_period": [
+    "2015-01-01",
+    "2019-12-31"
+  ],
+  "locked_test_period": [
+    "2020-01-01",
+    "2024-12-31"
+  ],
+  "test_period_previously_inspected_in_v1_diagnostics": true,
+  "neutralization": {
+    "winsorization": [
+      0.01,
+      0.99
+    ],
+    "industry": "monthly SIC two-digit dummy regression",
+    "size": "monthly log market cap regression",
+    "minimum_cross_section": 50,
+    "minimum_industry_count": 5,
+    "exception": "log_market_cap is industry-neutralized but not size-neutralized"
+  },
+  "research_thresholds": {
+    "minimum_coverage": 0.7,
+    "minimum_months": 120,
+    "minimum_mean_ic": 0.02,
+    "minimum_ic_hac_tstat": 2.0,
+    "minimum_net_spread_ann": 0.0,
+    "minimum_spread_hac_tstat": 1.5,
+    "minimum_quantile_monotonicity": 0.6,
+    "minimum_positive_internal_periods": 2,
+    "fdr_qvalue_for_select": 0.1,
+    "fdr_qvalue_for_watch": 0.25,
+    "minimum_watch_criteria": 5
+  },
+  "validation_thresholds": {
+    "minimum_mean_ic": 0.0,
+    "minimum_net_spread_ann": 0.0,
+    "minimum_quantile_monotonicity": 0.4,
+    "minimum_positive_month_ratio": 0.5,
+    "minimum_conditions_passed": 3
+  },
+  "redundancy_correlation_threshold": 0.7,
+  "research_selected_or_watch": [
+    "ebitda_to_ev",
+    "roe",
+    "cfo_roa",
+    "accruals",
+    "capex_to_assets",
+    "illiquidity",
+    "log_market_cap"
+  ],
+  "representatives_after_redundancy": [
+    "accruals",
+    "capex_to_assets",
+    "cfo_roa",
+    "ebitda_to_ev",
+    "illiquidity",
+    "log_market_cap",
+    "roe"
+  ],
+  "final_locked_candidates": [
+    "accruals",
+    "cfo_roa"
+  ],
+  "final_test_has_been_run_by_v2": false,
+  "portfolio_rules": {
+    "factor_weights": {
+      "accruals": 0.5,
+      "cfo_roa": 0.5
+    },
+    "required_factor_data": "both factors must be non-missing",
+    "portfolio_size": 100,
+    "position_weighting": "equal weight",
+    "maximum_stock_weight": 0.03,
+    "industry_definition": "SIC first digit",
+    "maximum_industry_weight": 0.25,
+    "minimum_eligible_stocks": 100,
+    "rebalance_frequency": "monthly",
+    "signal_timing": "month-end signal, next-month return",
+    "one_way_transaction_cost": 0.001,
+    "missing_return_policy": "do not replace missing returns with zero",
+    "delisting_policy": "CRSP total return includes DLRET when available",
+    "cash_return_assumption": 0.0
+  },
+  "portfolio_size_validation_candidates": [
+    30,
+    50,
+    100
+  ],
+  "portfolio_size_selection_rule": "positive net return; highest Sharpe; if within 0.10 choose broader portfolio, then lower turnover",
+  "selected_validation_summary": {
+    "months": 60.0,
+    "annual_return": 0.10974442762784564,
+    "annual_volatility": 0.13459306077252384,
+    "sharpe_zero_rf": 0.8153795373843608,
+    "maximum_drawdown": -0.1550957633458646,
+    "positive_month_ratio": 0.6833333333333333,
+    "average_turnover": 0.10200000000000001,
+    "annualized_transaction_cost": 0.0012240000000000003,
+    "benchmark_annual_return": 0.12359572486898096,
+    "annualized_excess_return_arithmetic": -0.010547014033039315,
+    "information_ratio": -0.2582564170173244,
+    "months_with_selection_failure": 0.0,
+    "portfolio_size_rule": 100.0
+  },
+  "configuration_sha256": "572605b6dbb07ad3ac811ca43e28493cac64afb28537454830b21dd69e075681"
+}

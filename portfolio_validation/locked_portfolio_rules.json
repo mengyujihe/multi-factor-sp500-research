@@ -1,0 +1,88 @@
+{
+  "version": "2.1",
+  "status": "PORTFOLIO_RULES_LOCKED_BEFORE_FINAL_TEST",
+  "parent_factor_configuration_sha256": "9efc9b094a52f71a8cb6be284844a4e2faf96e95d0c1bd8b83881f70d6636d75",
+  "factors": {
+    "accruals_neutral": 0.5,
+    "cfo_roa_neutral": 0.5
+  },
+  "missing_factor_rule": "require both factor values",
+  "minimum_eligible_stocks": 100,
+  "selected_stock_count": 100,
+  "weighting": "equal_weight",
+  "maximum_single_stock_weight": 0.03,
+  "industry_classification": "SIC division",
+  "maximum_industry_weight": 0.25,
+  "rebalance_frequency": "monthly",
+  "signal_timing": "month-end signal; earn next-month CRSP return",
+  "one_way_transaction_cost": 0.001,
+  "turnover_definition": "0.5 * sum(abs(target weight - drifted prior weight))",
+  "delisting_return_rule": "use CRSP total_ret including DLRET",
+  "missing_holding_return_rule": "flag anomaly; do not replace with zero",
+  "validation_variants": [
+    30,
+    50,
+    100
+  ],
+  "selection_rule": "Restricted to positive-CAGR variants. Highest Sharpe=0.8411; variants within 0.10 were tie-broken by lower turnover, then greater diversification.",
+  "validation_summary": [
+    {
+      "target_count": 30,
+      "months": 60,
+      "net_cagr": 0.09447035203992904,
+      "gross_cagr": 0.09676394460986915,
+      "benchmark_cagr": 0.12359572486898096,
+      "annualized_volatility": 0.15240125250301745,
+      "sharpe_rf0": 0.6694520667546698,
+      "maximum_drawdown": -0.2096555968610958,
+      "calmar": 0.4505978063753717,
+      "annualized_excess_return": -0.022003286568893957,
+      "information_ratio": -0.31816061535082013,
+      "average_turnover": 0.17575443354344272,
+      "average_selected_count": 30.0,
+      "minimum_eligible_count": 433,
+      "positive_month_ratio": 0.6166666666666667
+    },
+    {
+      "target_count": 50,
+      "months": 60,
+      "net_cagr": 0.10116210997714226,
+      "gross_cagr": 0.10318729163789975,
+      "benchmark_cagr": 0.12359572486898096,
+      "annualized_volatility": 0.13924902251895924,
+      "sharpe_rf0": 0.7631523994795572,
+      "maximum_drawdown": -0.17423297927346815,
+      "calmar": 0.5806140169270871,
+      "annualized_excess_return": -0.017760394372512638,
+      "information_ratio": -0.3438480761549482,
+      "average_turnover": 0.15495286162277758,
+      "average_selected_count": 50.0,
+      "minimum_eligible_count": 433,
+      "positive_month_ratio": 0.6333333333333333
+    },
+    {
+      "target_count": 100,
+      "months": 60,
+      "net_cagr": 0.10944711063251145,
+      "gross_cagr": 0.1110831737350979,
+      "benchmark_cagr": 0.12359572486898096,
+      "annualized_volatility": 0.1345930772073009,
+      "sharpe_rf0": 0.8411392186512213,
+      "maximum_drawdown": -0.15517876078419146,
+      "calmar": 0.7052969754328723,
+      "annualized_excess_return": -0.010817104235026718,
+      "information_ratio": -0.2648677241509676,
+      "average_turnover": 0.12450751683228423,
+      "average_selected_count": 100.0,
+      "minimum_eligible_count": 433,
+      "positive_month_ratio": 0.6833333333333333
+    }
+  ],
+  "locked_test_period": [
+    "2020-01-01",
+    "2024-12-31"
+  ],
+  "test_period_previously_inspected_in_v1_diagnostics": true,
+  "final_test_has_been_run_by_v2": false,
+  "configuration_sha256": "e914ca848ba6a12140c1735edc8dc112d3244f88b9b61e81b16e001c16dc6e0b"
+}

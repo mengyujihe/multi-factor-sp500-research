@@ -1,0 +1,47 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Large / licensed research data
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+data/
+wrds_output/
+factor_database/clean/
+factor_database/final/
+factor_detector_v2/neutralized_factor_panel.parquet
+locked_final_test/final_test_holdings.parquet
+portfolio_validation/*holdings*.parquet
+outputs/
+
+# Raw WRDS / CRSP / Compustat exports should not be uploaded publicly
+sp500_price.csv
+sp500_fundamentals.csv
+*crsp*.csv
+*compustat*.csv
+*wrds*.csv
+
+# Keep reports and small summary tables
+!factor_database/reports/
+!factor_database/reports/*.csv
+!factor_database/reports/*.json
+!factor_detector_v2/*.csv
+!factor_detector_v2/*.json
+!factor_detector_v2/README.md
+!locked_final_test/*.csv
+!locked_final_test/*.json
+!locked_final_test/*.md
+!portfolio_validation/*.csv
+!portfolio_validation/*.json
+!portfolio_validation/*.md
+

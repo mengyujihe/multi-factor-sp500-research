@@ -1,0 +1,14 @@
+metric,value
+test_period,2020-2024
+portfolio_size,100
+annual_return,14.89%
+benchmark_annual_return,14.93%
+annualized_excess_return,0.40%
+information_ratio,0.07
+annual_volatility,20.77%
+sharpe_zero_rf,0.72
+maximum_drawdown,-21.52%
+positive_month_ratio,62.71%
+average_monthly_turnover,11.58%
+annualized_transaction_cost,0.14%
+
